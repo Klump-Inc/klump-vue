@@ -2,7 +2,7 @@
    <div id="klump__checkout" @click="payWithKlump"/>
 </template>
 <script>
-export default {
+export default /*#__PURE__*/ {
     name: 'KlumpCheckout',
     props:{
         publicKey:{
