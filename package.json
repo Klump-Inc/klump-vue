@@ -1,12 +1,29 @@
 {
-  "name": "klump-vue-sdk",
-  "version": "0.1.0",
+  "name": "klump-checkout-vue",
+  "version": "0.0.1",
+  "description": "Vue Klump Component for Vue",
   "private": true,
+  "main": "dist/klump-checkout-vue.umd.min.js",
   "scripts": {
     "serve": "vue-cli-service serve",
-    "build": "vue-cli-service build",
+    "build": "vue-cli-service build --target lib --name klump-checkout-vue ./src/klump.js",
     "lint": "vue-cli-service lint"
   },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Klump-Inc/vuejs.git"
+  },
+  "files": [
+    "dist"
+  ],
+  "keywords": [
+    "Klump",
+    "Vue",
+    "Vuejs",
+    "Vue 2",
+    "Klump Checkout",
+    "Pay With Klump"
+  ],
   "dependencies": {
     "core-js": "^3.6.5",
     "vue": "^2.6.11"

@@ -1,4 +1,4 @@
-import KlumpCheckout from './components/KlumpCheckout.vue'
+import KlumpCheckout from './KlumpCheckout.vue'
 const Klumpjs = {
     // eslint-disable-next-line no-unused-vars
     install: (Vue, options) => {
