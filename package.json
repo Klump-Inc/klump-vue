@@ -1,5 +1,5 @@
 {
-  "name": "Klump-checkout",
+  "name": "Klump-checkout-vue",
   "version": "1.0.0",
   "description": "",
   "main": "dist/klump-checkout.ssr.js",
