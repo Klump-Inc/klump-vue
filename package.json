@@ -1,7 +1,8 @@
 {
   "name": "Klump-checkout-vue",
   "version": "1.0.0",
-  "description": "",
+  "description": "Klump Component for Vue",
+  "private": false,
   "main": "dist/klump-checkout.ssr.js",
   "browser": "dist/klump-checkout.esm.js",
   "module": "dist/klump-checkout.esm.js",
@@ -9,6 +10,18 @@
   "files": [
     "dist/*",
     "src/**/*.vue"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Klump-Inc/vuejs.git"
+  },
+  "keywords": [
+    "Klump",
+    "Vue",
+    "Vuejs",
+    "Vue 2",
+    "Klump Checkout",
+    "Pay With Klump"
   ],
   "sideEffects": false,
   "scripts": {
