@@ -1,13 +1,11 @@
 <script>
 import Vue from 'vue';
 import KlumpCheckout from '@/klump-checkout.vue';
-import KlumpButton from '@/klump-button.vue';
 
 export default Vue.extend({
   name: 'ServeDev',
   components: {
     KlumpCheckout,
-    KlumpButton
   },
   data(){
     return{
@@ -69,15 +67,6 @@ export default Vue.extend({
 
 <template>
   <div id="app">
-    <!-- <klump-checkout
-      :public-key="publicKey" 
-      :data="data" 
-      @on-error="onError" 
-      @on-load="onLoad"
-      @on-open="onOpen"
-      @on-success="onSuccess"
-      @on-close="onClose"
-     /> -->
-    <klump-button @on-click="pay" />
+    <klump-checkout @on-click="pay" />
   </div>
 </template>

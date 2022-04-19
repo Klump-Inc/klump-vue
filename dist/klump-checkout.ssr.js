@@ -60,43 +60,9 @@ function _nonIterableRest() {
 //
 var script = {
   name: 'KlumpCheckout',
-  props: {
-    publicKey: {
-      type: String,
-      required: true
-    },
-    data: {
-      type: Object,
-      required: true
-    }
-  },
   methods: {
-    onSuccess: function onSuccess(data) {
-      this.$emit('on-success', data);
-    },
-    onError: function onError(data) {
-      this.$emit('on-error', data);
-    },
-    onLoad: function onLoad(data) {
-      this.$emit('on-load', data);
-    },
-    onOpen: function onOpen(data) {
-      this.$emit('on-Open', data);
-    },
-    onClose: function onClose(data) {
-      this.$emit('on-close', data);
-    },
     payWithKlump: function payWithKlump() {
-      // eslint-disable-next-line no-undef
-      new Klump({
-        publicKey: this.publicKey,
-        data: this.data,
-        onSuccess: this.onSuccess,
-        onError: this.onError,
-        onClose: this.onClose,
-        onLoad: this.onLoad,
-        onOpen: this.onOpen
-      });
+      this.$emit('on-click');
     }
   },
   mounted: function mounted() {
@@ -207,7 +173,7 @@ var __vue_inject_styles__ = undefined;
 var __vue_scope_id__ = undefined;
 /* module identifier */
 
-var __vue_module_identifier__ = "data-v-60aea479";
+var __vue_module_identifier__ = "data-v-522fec5e";
 /* functional template */
 
 var __vue_is_functional_template__ = false;
