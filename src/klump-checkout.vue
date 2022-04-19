@@ -1,8 +1,8 @@
 <template>
-   <div id="klump__checkout" @click="payWithKlump"></div>
+   <div id="klump__checkout" @click="payWithKlump"/>
 </template>
 <script>
-export default {
+export default /*#__PURE__*/ {
     name: 'KlumpCheckout',
     props:{
         publicKey:{
@@ -43,5 +43,10 @@ export default {
 			});
         }
     },
+    mounted() {
+        const klumpScript = document.createElement("script");
+        klumpScript.src = "https://js.useklump.com/klump.js";
+        document.head.appendChild(klumpScript)
+    }
 }
 </script>
