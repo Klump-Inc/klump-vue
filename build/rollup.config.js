@@ -7,7 +7,9 @@ import commonjs from '@rollup/plugin-commonjs';
 import resolve from '@rollup/plugin-node-resolve';
 import replace from '@rollup/plugin-replace';
 import babel from '@rollup/plugin-babel';
-import { terser } from 'rollup-plugin-terser';
+import {
+  terser
+} from 'rollup-plugin-terser';
 import minimist from 'minimist';
 
 // Get browserslist config and remove ie from es build targets
@@ -29,12 +31,10 @@ const baseConfig = {
   plugins: {
     preVue: [
       alias({
-        entries: [
-          {
-            find: '@',
-            replacement: `${path.resolve(projectRoot, 'src')}`,
-          },
-        ],
+        entries: [{
+          find: '@',
+          replacement: `${path.resolve(projectRoot, 'src')}`,
+        }, ],
       }),
     ],
     replace: {
@@ -84,7 +84,7 @@ if (!argv.format || argv.format === 'es') {
     input: 'src/entry.esm.js',
     external,
     output: {
-      file: 'dist/klump-checkout.esm.js',
+      file: 'dist/klump-vue.esm.js',
       format: 'esm',
       exports: 'named',
     },
@@ -116,9 +116,9 @@ if (!argv.format || argv.format === 'cjs') {
     external,
     output: {
       compact: true,
-      file: 'dist/klump-checkout.ssr.js',
+      file: 'dist/klump-vue.ssr.js',
       format: 'cjs',
-      name: 'KlumpCheckout',
+      name: 'KlumpVue',
       exports: 'auto',
       globals,
     },
@@ -145,9 +145,9 @@ if (!argv.format || argv.format === 'iife') {
     external,
     output: {
       compact: true,
-      file: 'dist/klump-checkout.min.js',
+      file: 'dist/klump-vue.min.js',
       format: 'iife',
-      name: 'KlumpCheckout',
+      name: 'KlumpVue',
       exports: 'auto',
       globals,
     },

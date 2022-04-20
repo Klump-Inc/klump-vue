@@ -11,9 +11,9 @@
 Install the npm package:
 
 ```bash
-npm install --save klump-checkout-vue
+npm install --save klump-vue
 # OR
-yarn add klump-checkout-vue
+yarn add klump-vue
 ```
 
 ### Nuxt
@@ -21,9 +21,9 @@ yarn add klump-checkout-vue
 Install the npm package:
 
 ```bash
-npm install --save klump-checkout-vue
+npm install --save klump-vue
 # OR
-yarn add klump-checkout-vue
+yarn add klump-vue
 ```
 
 
@@ -41,7 +41,7 @@ yarn add klump-checkout-vue
 </template>
 
 <script>
-import KlumpCheckout from 'klump-checkout-vue';
+import {KlumpCheckout} from 'klump-vue';
 export default {
   components:{
     KlumpCheckout
