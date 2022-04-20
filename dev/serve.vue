@@ -1,23 +1,15 @@
-<template>
-  <div id="app">
-    <KlumpCheckout 
-    public-key="klp_pk_test_e4aaa1a8e96644ad9af23fa453ddd6ffa39a8233a88c4b93860f119c8cd9a332" 
-    :data="data" 
-    @on-error="onError" 
-    @on-load="onLoad"
-    @on-open="onOpen"
-    @on-success="onSuccess"
-    @on-close="onClose"
-    />
-  </div>
-</template>
-
 <script>
+import Vue from 'vue';
+import {KlumpCheckout} from '@/entry.esm';
 
-export default {
-  name: 'App',
+export default Vue.extend({
+  name: 'ServeDev',
+  components: {
+    KlumpCheckout,
+  },
   data(){
     return{
+      publicKey: 'klp_pk_1234abdc5678',
       data: {
             amount: 4100,
             shipping_fee: 100,
@@ -57,7 +49,24 @@ export default {
     onError(data){
       console.log(data)
     },
+    pay(){
+        // eslint-disable-next-line no-new
+        new Klump({
+          publicKey: this.publicKey,
+          data: this.data,
+          onSuccess: this.onSuccess,
+          onError: this.onError,
+          onClose: this.onClose,
+          onLoad: this.onLoad,
+          onOpen: this.onOpen
+        });
+    }
   }
-}
+});
 </script>
 
+<template>
+  <div id="app">
+    <klump-checkout @on-click="pay" />
+  </div>
+</template>
