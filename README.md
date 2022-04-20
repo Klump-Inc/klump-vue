@@ -11,9 +11,9 @@
 Install the npm package:
 
 ```bash
-npm install --save klump-checkout-vue
+npm install --save klump-vue
 # OR
-yarn add vue-klump-checkout-vue
+yarn add klump-vue
 ```
 
 ### Nuxt
@@ -21,9 +21,9 @@ yarn add vue-klump-checkout-vue
 Install the npm package:
 
 ```bash
-npm install --save klump-checkout-vue
+npm install --save klump-vue
 # OR
-yarn add klump-checkout-vue
+yarn add klump-vue
 ```
 
 
@@ -35,14 +35,17 @@ yarn add klump-checkout-vue
   <form action="#">
     <div class="btn-wrapper">
         <input type="number" v-model="data.amount" />
-        <klump-checkout-button @on-click="PayWithKlump" />
+        <klump-checkout @on-click="PayWithKlump" />
     </div>
   </form>
 </template>
 
 <script>
-import KlumpCheckout from 'klump-checkout-vue';
+import {KlumpCheckout} from 'klump-vue';
 export default {
+  components:{
+    KlumpCheckout
+  },
   data() {
     return {
       publicKey: 'klp_pk_1234abdc5678',

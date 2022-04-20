@@ -1,6 +1,6 @@
 <script>
 import Vue from 'vue';
-import KlumpCheckout from '@/klump-checkout.vue';
+import {KlumpCheckout} from '@/entry.esm';
 
 export default Vue.extend({
   name: 'ServeDev',
